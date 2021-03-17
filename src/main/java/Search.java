@@ -6,6 +6,6 @@ public class Search {
                 return i;
             }
         }
-        return 500;
+        return -1;
     }
 }
