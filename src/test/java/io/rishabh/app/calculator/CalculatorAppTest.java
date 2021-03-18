@@ -20,10 +20,10 @@ public class CalculatorAppTest {
         String command = "add 20,30,40";
         String actual = app.execute(command);
         String expected  = "90";
-        assertEquals(expected, actual);
+        assertEquals(expected, actual, command);
     }
 
-//    @Test
+    @Test
     void shouldIgnoreLetterCaseInCommandName() {
         String[] commands = new String[]{
                 "add 1,2,3",
