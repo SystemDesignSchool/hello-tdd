@@ -22,4 +22,24 @@ public class CalculatorAppTest {
         String expected  = "90";
         assertEquals(expected, actual);
     }
+
+//    @Test
+    void shouldIgnoreLetterCaseInCommandName() {
+        String[] commands = new String[]{
+                "add 1,2,3",
+                "Add 4,5,6",
+                "aDD 7,8,9",
+                "adD 10,11,12",
+                "ADD 13,14,15",
+        };
+
+        String[] expectedOutputs  = new String[]{"6", "15", "24", "33", "42",};
+
+        for(int i = 0 ; i < commands.length; i++){
+            String command = commands[i];
+            String expected = expectedOutputs[i];
+            String actual = app.execute(command);
+            assertEquals(expected, actual, command);
+        }
+    }
 }
