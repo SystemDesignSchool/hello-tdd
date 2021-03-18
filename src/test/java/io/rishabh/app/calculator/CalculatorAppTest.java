@@ -14,4 +14,12 @@ public class CalculatorAppTest {
         String expected = "Invalid command";
         assertEquals(expected, actual);
     }
+
+    @Test
+    void shouldAddNumbers() {
+        String command = "add 20,30,40";
+        String actual = app.execute(command);
+        String expected  = "90";
+        assertEquals(expected, actual);
+    }
 }
