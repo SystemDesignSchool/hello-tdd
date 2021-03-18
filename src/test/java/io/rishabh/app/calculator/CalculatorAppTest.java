@@ -24,6 +24,14 @@ public class CalculatorAppTest {
     }
 
     @Test
+    void shouldMultiplyNumbers() {
+        String command = "multiply 20,30,40";
+        String actual = app.execute(command);
+        String expected  = "24000";
+        assertEquals(expected, actual, command);
+    }
+
+    @Test
     void shouldIgnoreLetterCaseInCommandName() {
         String[] commands = new String[]{
                 "add 1,2,3",
