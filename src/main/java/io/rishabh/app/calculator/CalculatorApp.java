@@ -7,15 +7,10 @@ public class CalculatorApp {
         String[] inputFromUser  = command.split(" ");
         String inputCommand = inputFromUser[0];
         String values = inputFromUser[1];
-        int sum = 0;
         int product = 1;
 
         if (inputCommand.equalsIgnoreCase("add")){
-            String[] eachValue = values.split(",");
-            for(String myValue : eachValue){
-                sum += Integer.parseInt(myValue);
-            };
-            return Integer.toString(sum);
+            return addNumbers(values);
         }
 
         if(inputCommand.equalsIgnoreCase("multiply")){
@@ -26,5 +21,14 @@ public class CalculatorApp {
             return Integer.toString(product);
         }
         return "Invalid command";
+    }
+
+    private String addNumbers(String values){
+        int sum = 0;
+        String[] eachValue = values.split(",");
+        for(String myValue : eachValue){
+            sum += Integer.parseInt(myValue);
+        }
+        return Integer.toString(sum);
     }
 }
