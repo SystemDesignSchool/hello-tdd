@@ -14,11 +14,7 @@ public class CalculatorApp {
         }
 
         if(inputCommand.equalsIgnoreCase("multiply")){
-            String[] eachValue = values.split(",");
-            for (String myValue : eachValue){
-                product = product * Integer.parseInt(myValue);
-            }
-            return Integer.toString(product);
+            return multiplyNumbers(values);
         }
         return "Invalid command";
     }
@@ -30,5 +26,14 @@ public class CalculatorApp {
             sum += Integer.parseInt(myValue);
         }
         return Integer.toString(sum);
+    }
+
+    private String multiplyNumbers(String values){
+        int product = 1;
+        String[] eachValue = values.split(",");
+        for(String myValue : eachValue){
+            product = product * Integer.parseInt(myValue);
+        }
+        return Integer.toString(product);
     }
 }
