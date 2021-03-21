@@ -2,9 +2,7 @@ package io.rishabh.app.calculator;
 
 /* Responsiblities:
     - Parse command
-    - Add
-    - Multiply
-    - Find fibonacci
+    - Based on command name, invoke correct method from correct class
  */
 
 public class CalculatorApp {

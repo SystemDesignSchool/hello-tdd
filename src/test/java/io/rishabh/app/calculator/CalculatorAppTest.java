@@ -15,6 +15,19 @@ public class CalculatorAppTest {
         assertEquals(expected, actual);
     }
 
+
+//    @Test
+    void shouldKeepTrackOfCallsOfEachCOmmand() {
+        app.execute("add 2,3");
+        app.execute("add 4,1");
+
+        String command = "add log-count";
+
+        String actual = app.execute(command);
+        String expected  = "2";
+        assertEquals(expected, actual, command);
+    }
+
     @Test
     void shouldFindFibonacci() {
         String command = "fib 10";
