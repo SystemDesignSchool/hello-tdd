@@ -15,7 +15,6 @@ public class CalculatorAppTest {
         assertEquals(expected, actual);
     }
 
-
     @Test
     void shouldKeepTrackOfCallsOfEachCommand() {
         app.execute("add 2,3");

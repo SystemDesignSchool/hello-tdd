@@ -7,6 +7,8 @@ package io.rishabh.app.calculator;
 
 public class CalculatorApp {
 
+    private Add addition = new Add();
+
     public String execute(String command) {
 
         String[] inputs = command.split(" ");
@@ -14,7 +16,7 @@ public class CalculatorApp {
         String values = inputs[1];
 
         if (action.equalsIgnoreCase("add")) {
-            return Add.add(values);
+            return addition.add(values);
         }
 
         if (action.equalsIgnoreCase("multiply")) {
