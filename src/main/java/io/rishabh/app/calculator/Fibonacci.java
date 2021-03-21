@@ -1,7 +1,14 @@
 package io.rishabh.app.calculator;
 
 public class Fibonacci {
-    public static String fibonacci(String values) {
+    private int counter = 0;
+
+    public String fibonacci(String values) {
+
+        if(values.startsWith("log")){
+            return Integer.toString(counter);
+        }
+
         int length = Integer.parseInt(values);
         int[] fibArray = new int[length];
         fibArray[0] = 0;
@@ -10,6 +17,7 @@ public class Fibonacci {
         for (int i  = 2; i < length; i++){
             fibArray[i] = fibArray[i-1] + fibArray [i-2];
         }
+        counter ++;
         return Integer.toString(fibArray[length-1]);
     }
 }

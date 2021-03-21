@@ -16,9 +16,37 @@ public class CalculatorAppTest {
     }
 
     @Test
-    void shouldKeepTrackOfCallsOfEachCommand() {
+    void shouldKeepTrackOfCallsOfFibonacciCommand() {
+        app.execute("fib 5");
+        app.execute("fib 6");
+        app.execute("fib 10");
+
+        String command = "fib log-count";
+
+        String actual = app.execute(command);
+        String expected  = "3";
+        assertEquals(expected, actual, command);
+    }
+
+    @Test
+    void shouldKeepTrackOfCallsOfMultiplyCommand() {
+        app.execute("multiply 5,6");
+        app.execute("multiply 2,3");
+        app.execute("multiply 1,1");
+        app.execute("multiply 2,6");
+        app.execute("multiply 8,3");
+
+        String command = "multiply log-count";
+
+        String actual = app.execute(command);
+        String expected  = "5";
+        assertEquals(expected, actual, command);
+    }
+
+    @Test
+    void shouldKeepTrackOfCallsOfAddCommand() {
+        app.execute("add 5,6");
         app.execute("add 2,3");
-        app.execute("add 4,1");
 
         String command = "add log-count";
 

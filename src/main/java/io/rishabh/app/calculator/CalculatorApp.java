@@ -8,6 +8,8 @@ package io.rishabh.app.calculator;
 public class CalculatorApp {
 
     private Add addition = new Add();
+    private Multiply multiply = new Multiply();
+    private Fibonacci fib = new Fibonacci();
 
     public String execute(String command) {
 
@@ -20,11 +22,11 @@ public class CalculatorApp {
         }
 
         if (action.equalsIgnoreCase("multiply")) {
-            return Multiply.multiply(values);
+            return multiply.multiply(values);
         }
 
         if (action.equalsIgnoreCase("fib")) {
-            return Fibonacci.fibonacci(values);
+            return fib.fibonacci(values);
         }
         return "Invalid command";
     }
