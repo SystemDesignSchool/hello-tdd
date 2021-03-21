@@ -48,3 +48,17 @@ Car.wheelsCount;
 
 
 
+### SOLID Principles
+
+> Design principles for good object oriented design.
+>
+> Think about it when you create a class.
+
+- **S** : Single Responsibility Principle
+
+  > For any class that you define, can you clearly write one responsibility that it has.
+  >
+  > Classes doing all kind of things are **Managers**, and ***good prograamers hate managers.***
+
+- **O** : Open/Close Principle
+

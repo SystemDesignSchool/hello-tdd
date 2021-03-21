@@ -1,5 +1,12 @@
 package io.rishabh.app.calculator;
 
+/* Responsiblities:
+    - Parse command
+    - Add
+    - Multiply
+    - Find fibonacci
+ */
+
 public class CalculatorApp {
 
     public String execute(String command) {
