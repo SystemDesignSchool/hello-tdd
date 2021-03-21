@@ -15,7 +15,7 @@ public class CalculatorAppTest {
         assertEquals(expected, actual);
     }
 
-//    @Test
+    @Test
     void shouldFindFibonacci() {
         String command = "fib 10";
         String actual = app.execute(command);
