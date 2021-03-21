@@ -16,8 +16,8 @@ public class CalculatorAppTest {
     }
 
 
-//    @Test
-    void shouldKeepTrackOfCallsOfEachCOmmand() {
+    @Test
+    void shouldKeepTrackOfCallsOfEachCommand() {
         app.execute("add 2,3");
         app.execute("add 4,1");
 
