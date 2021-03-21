@@ -15,6 +15,14 @@ public class CalculatorAppTest {
         assertEquals(expected, actual);
     }
 
+//    @Test
+    void shouldFindFibonacci() {
+        String command = "fib 10";
+        String actual = app.execute(command);
+        String expected  = "34";
+        assertEquals(expected, actual, command);
+    }
+
     @Test
     void shouldAddNumbers() {
         String command = "add 20,30,40";
