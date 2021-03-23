@@ -80,6 +80,14 @@ public class CalculatorAppTest {
     }
 
     @Test
+    void shouldSupportMulCommand() {
+        String command = "mul 20,30";
+        String actual = app.execute(command);
+        String expected  = "600";
+        assertEquals(expected, actual, command);
+    }
+
+    @Test
     void shouldMultiplyNumbers() {
         String command = "multiply 20,30,40";
         String actual = app.execute(command);

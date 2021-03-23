@@ -21,7 +21,7 @@ public class CalculatorApp {
             return addition.add(values);
         }
 
-        if (action.equalsIgnoreCase("multiply")) {
+        if (action.equalsIgnoreCase("multiply") || action.equalsIgnoreCase("mul")) {
             return multiply.multiply(values);
         }
 
