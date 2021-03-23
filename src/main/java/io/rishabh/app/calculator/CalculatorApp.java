@@ -17,7 +17,7 @@ public class CalculatorApp {
         String action = inputs[0];
         String values = inputs[1];
 
-        if (action.equalsIgnoreCase("add")) {
+        if (action.equalsIgnoreCase("add") || action.equalsIgnoreCase("addition")) {
             return addition.add(values);
         }
 

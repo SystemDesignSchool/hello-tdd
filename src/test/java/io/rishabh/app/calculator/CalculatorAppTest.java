@@ -71,8 +71,7 @@ public class CalculatorAppTest {
         assertEquals(expected, actual, command);
     }
 
-
-//    @Test
+    @Test
     void shouldSupportAdditionCommand() {
         String command = "addition 20,30,40";
         String actual = app.execute(command);
