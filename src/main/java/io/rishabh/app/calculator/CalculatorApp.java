@@ -8,9 +8,15 @@ package io.rishabh.app.calculator;
 
 public class CalculatorApp {
 
-    private Add addition = new Add();
-    private Multiply multiply = new Multiply();
-    private Fibonacci fib = new Fibonacci();
+    private final Add addition;
+    private final Multiply multiply;
+    private final Fibonacci fib;
+
+    public CalculatorApp(Add addition, Multiply multiply, Fibonacci fib  ){
+        this.addition = addition;
+        this.multiply = multiply;
+        this.fib = fib;
+    }
 
     public String execute(String command) {
 

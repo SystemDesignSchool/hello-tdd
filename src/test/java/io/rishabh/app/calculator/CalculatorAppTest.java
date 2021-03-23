@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class CalculatorAppTest {
-    private CalculatorApp app = new CalculatorApp();
+    private CalculatorApp app = new CalculatorApp(new Add(), new Multiply(), new Fibonacci());
 
     @Test
     void shouldDetectInvalidCommand() {
