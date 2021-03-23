@@ -13,12 +13,16 @@ public class Add {
         }
         return false;
     }
-    public String add(String values){
+    public String add(String input){
+
+        String[] inputs = input.split(" ");
+        String parameters = inputs[1];
+
         int sum = 0;
-        if(values.startsWith("log")){
+        if(parameters.startsWith("log")){
             return Integer.toString(counter);
         }
-        String[] eachValue = values.split(",");
+        String[] eachValue = parameters.split(",");
         for(String obtainedValue : eachValue){
             sum += Integer.parseInt(obtainedValue);
         }

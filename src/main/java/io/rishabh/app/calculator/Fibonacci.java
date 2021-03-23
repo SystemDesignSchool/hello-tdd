@@ -14,13 +14,16 @@ public class Fibonacci {
         return false;
     }
 
-    public String fibonacci(String values) {
+    public String fibonacci(String input) {
 
-        if(values.startsWith("log")){
+        String[] inputs = input.split(" ");
+        String parameters = inputs[1];
+
+        if(parameters.startsWith("log")){
             return Integer.toString(counter);
         }
 
-        int length = Integer.parseInt(values);
+        int length = Integer.parseInt(parameters);
         int[] fibArray = new int[length];
         fibArray[0] = 0;
         fibArray[1] = 1;

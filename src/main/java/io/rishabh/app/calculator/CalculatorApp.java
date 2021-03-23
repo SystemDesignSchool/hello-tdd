@@ -1,8 +1,9 @@
 package io.rishabh.app.calculator;
 
 /* Responsiblities:
-    - Parse command
+    - Parse command: Moved to each class
     - Based on command name, invoke correct method from correct class
+    -
  */
 
 public class CalculatorApp {
@@ -13,19 +14,16 @@ public class CalculatorApp {
 
     public String execute(String command) {
 
-        String[] inputs = command.split(" ");
-        String values = inputs[1];
-
         if (addition.appliesTo(command)) {
-            return addition.add(values);
+            return addition.add(command);
         }
 
         if (multiply.appliesTo(command)) {
-            return multiply.multiply(values);
+            return multiply.multiply(command);
         }
 
         if (fib.appliesTo(command)) {
-            return fib.fibonacci(values);
+            return fib.fibonacci(command);
         }
         return "Invalid command";
     }

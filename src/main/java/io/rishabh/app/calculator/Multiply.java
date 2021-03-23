@@ -15,14 +15,18 @@ public class Multiply {
         return false;
     }
 
-    public String multiply(String values){
+    public String multiply(String input){
+
+        String[] inputs = input.split(" ");
+        String parameters = inputs[1];
+
         int product = 1;
 
-        if(values.startsWith("log")){
+        if(parameters.startsWith("log")){
             return Integer.toString(counter);
         }
 
-        String[] eachValue = values.split(",");
+        String[] eachValue = parameters.split(",");
         for(String obtainedValue : eachValue){
             product = product * Integer.parseInt(obtainedValue);
         }
