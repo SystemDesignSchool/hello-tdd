@@ -48,6 +48,15 @@ Car.wheelsCount;
 
 
 
+### Object Oriented Prinicples
+
+- **Encapsulation**
+- **Inheritence**
+- **Polymorphism**
+- **Abstraction**
+
+
+
 ### SOLID Principles
 
 > Design principles for good object oriented design.
@@ -61,4 +70,10 @@ Car.wheelsCount;
   > Classes doing all kind of things are **Managers**, and ***good prograamers hate managers.***
 
 - **O** : Open/Close Principle
+
+- **L:** Liskov Substitution
+
+- **I  :** Interface seggregation
+
+- **D :** Dependency inversion
 

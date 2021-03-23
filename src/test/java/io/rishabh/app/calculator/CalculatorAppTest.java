@@ -71,6 +71,15 @@ public class CalculatorAppTest {
         assertEquals(expected, actual, command);
     }
 
+
+//    @Test
+    void shouldSupportAdditionCommand() {
+        String command = "addition 20,30,40";
+        String actual = app.execute(command);
+        String expected  = "90";
+        assertEquals(expected, actual, command);
+    }
+
     @Test
     void shouldMultiplyNumbers() {
         String command = "multiply 20,30,40";
