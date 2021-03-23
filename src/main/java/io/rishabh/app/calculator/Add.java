@@ -7,11 +7,11 @@ public class Add {
 
         String[] inputs = input.split(" ");
         String action = inputs[0];
-        String parameters = inputs[1];
 
-        if (action.equalsIgnoreCase("add") || action.equalsIgnoreCase("addition"))
-        return true;
-        else return false;
+        if (action.equalsIgnoreCase("add") || action.equalsIgnoreCase("addition")){
+            return true;
+        }
+        return false;
     }
     public String add(String values){
         int sum = 0;

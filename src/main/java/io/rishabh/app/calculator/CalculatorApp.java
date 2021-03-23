@@ -14,18 +14,17 @@ public class CalculatorApp {
     public String execute(String command) {
 
         String[] inputs = command.split(" ");
-        String action = inputs[0];
         String values = inputs[1];
-        
+
         if (addition.appliesTo(command)) {
             return addition.add(values);
         }
 
-        if (action.equalsIgnoreCase("multiply") || action.equalsIgnoreCase("mul")) {
+        if (multiply.appliesTo(command)) {
             return multiply.multiply(values);
         }
 
-        if (action.equalsIgnoreCase("fib") || action.equalsIgnoreCase("fibonacci")) {
+        if (fib.appliesTo(command)) {
             return fib.fibonacci(values);
         }
         return "Invalid command";

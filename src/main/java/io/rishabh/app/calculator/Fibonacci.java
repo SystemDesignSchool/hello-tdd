@@ -3,6 +3,17 @@ package io.rishabh.app.calculator;
 public class Fibonacci {
     private int counter = 0;
 
+    public boolean appliesTo(String input){
+
+        String[] inputs = input.split(" ");
+        String action = inputs[0];
+
+        if(action.equalsIgnoreCase("fib") || action.equalsIgnoreCase("fibonacci")){
+            return true;
+        }
+        return false;
+    }
+
     public String fibonacci(String values) {
 
         if(values.startsWith("log")){
