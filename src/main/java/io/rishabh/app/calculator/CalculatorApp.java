@@ -25,7 +25,7 @@ public class CalculatorApp {
             return multiply.multiply(values);
         }
 
-        if (action.equalsIgnoreCase("fib")) {
+        if (action.equalsIgnoreCase("fib") || action.equalsIgnoreCase("fibonacci")) {
             return fib.fibonacci(values);
         }
         return "Invalid command";
