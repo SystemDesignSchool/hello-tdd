@@ -71,9 +71,92 @@ Car.wheelsCount;
 
 - **O** : Open/Close Principle
 
+  > Classes should be open for extension but closed for modification
+
 - **L:** Liskov Substitution
+
+  > Type can replace sub-type
 
 - **I  :** Interface seggregation
 
 - **D :** Dependency inversion
+
+
+
+```
+add 2,2
+mult 3,4
+add log-count
+
+```
+
+
+
+```
+App
+- received user input
+- and invokes correct command
+```
+
+
+
+```java
+Constructor: create objects
+
+class MyClass{
+  
+  // Same as class name
+  // No return type
+  private string name;
+  
+  public MyClass(string name){
+    this.name = name;
+  }
+  
+	public static string sayHelloStatic(string name){
+    	return "hello-static " + name;
+  }
+  
+  public string sayHelloInstance(string name){
+	    return "hello-instance " + this.name  ;
+  }
+}
+```
+
+
+
+```java
+// Static
+string message = MyClass.sayHelloStatic("rishasi");
+
+// Instance
+MyClass myObject = new MyClass(); // Default constructor
+string message = myObjet.sayHelloInstance("rishasi");
+
+// Constructor
+MyClass object = new MyClass("rishasi");
+string messgae = object.sayHelloInstance("singh");
+// message = hello-instance rishasi
+```
+
+
+
+
+
+```java
+class Car {
+	
+}
+
+class IndianCar extends Car{
+  
+}
+
+class Truck{
+  
+}
+
+Car car = new Car();
+car = new IndianCar();
+```
 
