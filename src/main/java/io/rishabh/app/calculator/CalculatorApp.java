@@ -12,7 +12,7 @@ public class CalculatorApp {
     private final Multiply multiply;
     private final Fibonacci fib;
 
-    public CalculatorApp(Add addition, Multiply multiply, Fibonacci fib  ){
+    public CalculatorApp(Add addition, Multiply multiply, Fibonacci fib){
         this.addition = addition;
         this.multiply = multiply;
         this.fib = fib;
@@ -20,17 +20,17 @@ public class CalculatorApp {
 
     public String execute(String command) {
 
-        if (addition.appliesTo(command)) {
-            return addition.add(command);
+        Command[] commandObj = new Command[3];
+        commandObj[0] = addition;
+        commandObj[1] = multiply;
+        commandObj[2] = fib;
+
+        for (int i = 0; i < commandObj.length; i++) {
+            if(commandObj[i].appliesTo(command)){
+                return commandObj[i].execute(command);
+            }
         }
 
-        if (multiply.appliesTo(command)) {
-            return multiply.multiply(command);
-        }
-
-        if (fib.appliesTo(command)) {
-            return fib.fibonacci(command);
-        }
         return "Invalid command";
     }
 }

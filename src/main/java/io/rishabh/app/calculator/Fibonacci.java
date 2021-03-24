@@ -1,6 +1,6 @@
 package io.rishabh.app.calculator;
 
-public class Fibonacci {
+public class Fibonacci extends Command{
     private int counter = 0;
 
     public boolean appliesTo(String input){
@@ -8,13 +8,11 @@ public class Fibonacci {
         String[] inputs = input.split(" ");
         String action = inputs[0];
 
-        if(action.equalsIgnoreCase("fib") || action.equalsIgnoreCase("fibonacci")){
-            return true;
-        }
-        return false;
+        return (action.equalsIgnoreCase("fib") || action.equalsIgnoreCase("fibonacci"));
+
     }
 
-    public String fibonacci(String input) {
+    public String execute(String input) {
 
         String[] inputs = input.split(" ");
         String parameters = inputs[1];

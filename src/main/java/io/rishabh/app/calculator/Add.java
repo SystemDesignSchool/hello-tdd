@@ -1,6 +1,6 @@
 package io.rishabh.app.calculator;
 
-public class Add {
+public class Add extends Command{
     private int counter = 0;
 
     public boolean appliesTo(String input){
@@ -8,12 +8,9 @@ public class Add {
         String[] inputs = input.split(" ");
         String action = inputs[0];
 
-        if (action.equalsIgnoreCase("add") || action.equalsIgnoreCase("addition")){
-            return true;
-        }
-        return false;
+        return action.equalsIgnoreCase("add") || action.equalsIgnoreCase("addition");
     }
-    public String add(String input){
+    public String execute(String input){
 
         String[] inputs = input.split(" ");
         String parameters = inputs[1];
