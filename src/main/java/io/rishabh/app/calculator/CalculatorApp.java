@@ -1,36 +1,24 @@
 package io.rishabh.app.calculator;
 
-/* Responsiblities:
+/* Responsibilities:
     - Parse command: Moved to each class
     - Based on command name, invoke correct method from correct class
     -
  */
 
 public class CalculatorApp {
-
-    private final Add addition;
-    private final Multiply multiply;
-    private final Fibonacci fib;
+    private final Command[] commands;
 
     public CalculatorApp(Add addition, Multiply multiply, Fibonacci fib){
-        this.addition = addition;
-        this.multiply = multiply;
-        this.fib = fib;
+        this.commands = new Command[]{addition, multiply, fib};
     }
 
     public String execute(String command) {
-
-        Command[] commandObj = new Command[3];
-        commandObj[0] = addition;
-        commandObj[1] = multiply;
-        commandObj[2] = fib;
-
-        for (int i = 0; i < commandObj.length; i++) {
-            if(commandObj[i].appliesTo(command)){
-                return commandObj[i].execute(command);
+        for (int i = 0; i < commands.length; i++) {
+            if(commands[i].appliesTo(command)){
+                return commands[i].execute(command);
             }
         }
-
         return "Invalid command";
     }
 }
