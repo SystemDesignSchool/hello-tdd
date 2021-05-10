@@ -1,6 +1,6 @@
 package io.rishabh.app.calculator;
 
-public class Fibonacci extends Command{
+public class Fibonacci implements Command{
     private int counter = 0;
 
     public boolean appliesTo(String input){

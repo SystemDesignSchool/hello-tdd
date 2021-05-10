@@ -160,3 +160,39 @@ Car car = new Car();
 car = new IndianCar();
 ```
 
+### Contract
+
+Contract for `Command` class:
+
+```java
+// Represents a Command in CLI App.
+public abstract class Command {
+    // Should return 'true' if this object can execute the user input.
+    public abstract boolean appliesTo(String input);
+
+    // Executes the user input and returns result.
+    public abstract String execute(String input);
+}
+```
+
+Now this `Class` has only contract, no data and no behavior. So it makes sense to convert it to an `Interface`.
+
+```java
+// Represents a Command in CLI App.
+public interface Command {
+    // Should return 'true' if this object can execute the user input.
+    public boolean appliesTo(String input);
+
+    // Executes the user input and returns result.
+    public String execute(String input);
+}
+```
+
+
+
+---
+
+### Class v/s Interface:
+
+- Class has data, behaviour and contract.
+- Interface has only contract.

@@ -1,7 +1,10 @@
 package io.rishabh.app.calculator;
 
-public abstract class Command {
-    public abstract boolean appliesTo(String inputs);
-    public abstract String execute(String inputs);
+// Represents a Command in CLI App.
+public interface Command {
+    // Should return 'true' if this object can execute the user input.
+    boolean appliesTo(String input);
 
+    // Executes the user input and returns result.
+    String execute(String input);
 }
