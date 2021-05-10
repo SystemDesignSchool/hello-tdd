@@ -1,11 +1,12 @@
 package io.rishabh.app.calculator;
 
 import org.junit.jupiter.api.Test;
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class CalculatorAppTest {
-    private CalculatorApp app = new CalculatorApp(new Command[]{new Add(), new Multiply(), new Fibonacci()});
+
+    private final Command[] allCommands = {new Add(), new Multiply(), new Fibonacci()};
+    private final CalculatorApp app = new CalculatorApp(allCommands);
 
     @Test
     void shouldDetectInvalidCommand() {

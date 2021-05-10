@@ -12,9 +12,9 @@ public class CalculatorApp {
     }
 
     public String execute(String command) {
-        for (int i = 0; i < commands.length; i++) {
-            if(commands[i].appliesTo(command)){
-                return commands[i].execute(command);
+        for (Command userCommand : commands){
+            if (userCommand.appliesTo(command)){
+                return userCommand.execute(command);
             }
         }
         return "Invalid command";
