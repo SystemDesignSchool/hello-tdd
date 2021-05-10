@@ -1,6 +1,6 @@
 package io.rishabh.app.calculator;
 
-public class Add implements Command{
+public class Add extends Command{
     private int counter = 0;
 
     public boolean appliesTo(String input){

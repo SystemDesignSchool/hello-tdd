@@ -1,6 +1,6 @@
 package io.rishabh.app.calculator;
 
-public class Multiply implements Command{
+public class Multiply extends Command{
     private int counter = 0;
 
     public boolean appliesTo(String input){
