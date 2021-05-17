@@ -196,3 +196,55 @@ public interface Command {
 
 - Class has data, behaviour and contract.
 - Interface has only contract.
+
+---
+
+### Constructor
+
+- Constructor are just like methods, but with no return type.
+
+  ```java
+  // contructor has no return type
+  protected Command(String[] alias){
+  }
+  
+  // method has a return type
+  protected void Command(String[] alias){     
+  }
+  ```
+
+- Contructors are used to create Objects.
+
+- Constructors are invoked either:
+
+  - Using `new` keyword
+  - Or, from Constructor of sub-class.
+
+```java
+public class TestConstructor {
+
+    public static void main(String[] args) {
+        FourWheeler fourWheeler = new FourWheeler();
+        System.out.println("Constructors");
+    }
+}
+
+class Vehicle{
+    Vehicle(){
+        System.out.println("Running Vehicle default constructor");
+    }
+}
+
+class FourWheeler extends Vehicle{
+    FourWheeler(){
+        System.out.println("Four wheeler default constructor");
+    }
+}
+
+//Output:
+> Task :TestConstructor.main()
+Running Vehicle default constructor
+Four wheeler default constructor
+Constructors
+```
+

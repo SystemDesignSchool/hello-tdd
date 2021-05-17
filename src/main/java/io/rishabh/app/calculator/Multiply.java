@@ -1,7 +1,6 @@
 package io.rishabh.app.calculator;
 
-public class Multiply extends Command{
-    private int counter = 0;
+public class Multiply extends Loggable implements Command{
 
     public boolean appliesTo(String input){
 
@@ -19,8 +18,8 @@ public class Multiply extends Command{
 
         int product = 1;
 
-        if(parameters.startsWith("log")){
-            return Integer.toString(counter);
+        if(isLoggable(parameters)){
+            return logCount(parameters);
         }
 
         String[] eachValue = parameters.split(",");

@@ -1,7 +1,6 @@
 package io.rishabh.app.calculator;
 
-public class Fibonacci extends Command{
-    private int counter = 0;
+public class Fibonacci extends Loggable implements Command{
 
     public boolean appliesTo(String input){
 
@@ -17,8 +16,8 @@ public class Fibonacci extends Command{
         String[] inputs = input.split(" ");
         String parameters = inputs[1];
 
-        if(parameters.startsWith("log")){
-            return Integer.toString(counter);
+        if(isLoggable(parameters)){
+            return logCount(parameters);
         }
 
         int length = Integer.parseInt(parameters);

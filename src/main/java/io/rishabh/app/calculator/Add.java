@@ -1,7 +1,6 @@
 package io.rishabh.app.calculator;
 
-public class Add extends Command{
-    private int counter = 0;
+public class Add extends Loggable implements Command {
 
     public boolean appliesTo(String input){
 
@@ -16,13 +15,15 @@ public class Add extends Command{
         String parameters = inputs[1];
 
         int sum = 0;
-        if(parameters.startsWith("log")){
-            return Integer.toString(counter);
+        if(isLoggable(parameters)){
+            return logCount(parameters);
         }
+
         String[] eachValue = parameters.split(",");
         for(String obtainedValue : eachValue){
             sum += Integer.parseInt(obtainedValue);
         }
+
         counter++;
         return Integer.toString(sum);
     }
